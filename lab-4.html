@@ -2,129 +2,143 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta name="数字展销平台">
-    <link rel="stylesheet" href="lab14.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>秋分图书展销 - 首页</title>
+    <link rel="stylesheet" href="lab.4.css">
+    <link rel="stylesheet" href="iconfont.css">
 </head>
 <body>
-       <nav class="fixed-nav">
-        <div class="nav-container">
-            <a href=" " class="logo">数字展销平台</a >
-            <ul class="nav-menu">
+    <header class="fixed-header">
+        <div class="logo">秋分图书展销</div>
+        <nav class="main-nav">
+            <ul>
                 <li class="dropdown">
-                    <a href="#" class="dropdown-btn">图书分类</a >
-                    <ul class="dropdown-menu">
-                        <li><a href="#">小说</a ></li>
-                        <li><a href="#">科普</a ></li>
-                        <li><a href="#">历史</a ></li>
-                    </ul>
+                    <a href class="dropdown-btn">图书分类 ▾</a >
+                    <div class="dropdown-menu">
+                        <a href="#"><span class="iconfont icon-tubiao1shuxiaoshuo"></span>文学小说</a>
+                        <a href="#"><span class="iconfont icon-tubiao1shuxiaoshuo"></span>计算机科技</a>
+                        <a href="#"><span class="iconfont icon-tubiao1shuxiaoshuo"></span>历史人文</a>
+                        <a href="#"><span class="iconfont icon-tubiao1shuxiaoshuo"></span>艺术设计</a>
+                        <a href="#"><span class="iconfont icon-tubiao1shuxiaoshuo"></span>生活百科</a >
+                    </div>
                 </li>
                 <li class="dropdown">
-                    <a href="#" class="dropdown-btn">价格区间</a >
-                    <ul class="dropdown-menu">
-                        <li><a href="#">0-50元</a ></li>
-                        <li><a href="#">50-100元</a ></li>
-                        <li><a href="#">100元以上</a ></li>
-                    </ul>
+                    <a href="#" class="dropdown-btn">价格筛选 ▾</a >
+                    <div class="dropdown-menu">
+                        <a href="#">0-50元</a >
+                        <a href="#">50-100元</a >
+                        <a href="#">100元以上</a >
+                    </div>
                 </li>
+                <li><a href="#">促销活动</a ></li>
+                <li><a href="#">关于我们</a ></li>
             </ul>
-            <div class="nav-right">
-                <a href="#" class="cart">购物车</a >
-                <a href="#" class="back-top">返回顶部</a >
+        </nav>
+    </header>
+    <div class="container">
+        <aside class="left-bar">
+            <h3>图书分类导航</h3>
+            <ul class="category-list">
+                <li><a href="#">文学小说</a ></li>
+                <li><a href="#">计算机科技</a ></li>
+                <li><a href="#">历史人文</a ></li>
+                <li><a href="#">艺术设计</a ></li>
+                <li><a href="#">生活百科</a ></li>
+            </ul>
+        </aside>
+        <main class="middle-content">
+            <section class="hot-recommend">
+                <h2>热门推荐</h2>
+                <div class="book-card-group">
+                    <div class="book-card">
+                        <div class="book-img" title="点击查看详情">
+                            <img src="12.jpg" alt="病隙碎笔">
+                            <div class="img-preview">
+                                <img src="12.jpg" alt="病隙碎笔预览">
+                                <p class="preview-desc">《病隙碎笔》是史铁生的散文代表作，充满生命哲思</p >
+                            </div>
+                        </div>
+                        <h4>《病隙碎笔》</h4>
+                        <p class="book-sub"></p >
+                    </div>
+                    <div class="book-card">
+                        <div class="book-img" title="点击查看详情">
+                            <img src="11.jpg" alt="我与地坛">
+                            <div class="img-preview">
+                                <img src="11.jpg" alt="我与地坛预览">
+                                <p class="preview-desc">《我与地坛》是史铁生的生命独白，感动无数读者</p >
+                            </div>
+                        </div>
+                        <h4>《我与地坛》</h4>
+                        <p class="book-sub"></p >
+                    </div>
+                    <div class="book-card">
+                        <div class="book-img" title="点击查看详情">
+                            <img src="13.jpg" alt="雪国">
+                            <div class="img-preview">
+                                <img src="13.jpg" alt="雪国预览">
+                                <p class="preview-desc">《雪国》是川端康成的诺贝尔文学奖作品，唯美哀婉</p >
+                            </div>
+                        </div>
+                        <h4>《雪国》</h4>
+                        <p class="book-sub"></p>
+                    </div>
+                </div>
+            </section>
+            <section class="new-books">
+                <h2>新书上市</h2>
+                <table class="new-book-table">
+                    <thead>
+                        <tr>
+                            <th>新书名称</th>
+                            <th>原价</th>
+                            <th>分类</th>
+                            <th>现价</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>《AI时代与人类未来》</td>
+                            <td>¥79</td>
+                            <td>科技</td>
+                            <td>¥69</td>
+                        </tr>
+                        <tr>
+                            <td>《长安的荔枝》</td>
+                            <td>¥42</td>
+                            <td>小说</td>
+                            <td>¥35</td>
+                        </tr>
+                        <tr>
+                            <td>《人类简史》</td>
+                            <td>¥65</td>
+                            <td>人文</td>
+                            <td>¥55</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <div class="banner">
+                <p>秋分图书展销 · 全场8折起</p >
+                <p>活动时间：11.1-11.11 | 满100减20 上不封顶</p >
             </div>
-        </div>
-    </nav>
-    <div class="banner">
-        <div class="banner-imgs">
-            <img src="11.jpg" alt="轮播图1">
-            <img src="12.jpg" alt="轮播图2">
-            <img src="13.jpg" alt="轮播图3">
-        </div>
-        <div class="banner-indicators">
-            <span class="active"></span>
-            <span></span>
-            <span></span>
-        </div>
+        </main>
+        <aside class="right-bar">
+            <div class="promo">
+                <h3>限时促销</h3>
+                <div class="promo-item orange">
+                    <div class="promo-title">全场图书满减</div>
+                    <div class="promo-desc">满100减20<br>满200减50<br>活动时间：11.1-11.11</div>
+                </div>
+                <div class="promo-item orange">
+                    <div class="promo-title">科技类图书赠品</div>
+                    <div class="promo-desc">购任意科技类图书<br>送定制笔记本1本<br>数量有限，先到先得</div>
+                </div>
+                <div class="promo-mask">
+                    <p>限时<br>特惠</p >
+                </div>
+            </div>
+        </aside>
     </div>
-    <div class="book-list">
-        <h2>热门图书推荐</h2>
-        <div class="books">
-            <div class="book-item">
-                <img src="14.jpg" alt="图书1">>
-                <div class="book-preview">
-                    <img src="14.jpg" alt="图书1-大图预览">
-                </div>
-                <div class="book-info">
-                    <h3>雪国</h3>
-                    <p>作者：</p >
-                    <p>价格：¥59.00</p >
-                </div>
-                <div class="book-actions">
-                    <button>加入购物车</button>
-                    <button>立即购买</button>
-                </div>
-            </div>
-            <div class="book-item">
-                <img src="15.jpg" alt="图书2">
-                <div class="book-preview">
-                    <img src="15.jpg" alt="图书2-大图预览">
-                </div>
-                <div class="book-info">
-                    <h>窄门</h>
-                    <p>作者：</p >
-                    <p>价格：¥45.00</p >
-                </div>
-                <div class="book-actions">
-                    <button>加入购物车</button>
-                    <button>立即购买</button>
-                </div>
-            </div>
-            <div class="book-item">
-                <img src="16.jpg" alt="图书3">
-                <div class="book-preview">
-                    <img src="16.jpg" alt="图书3-大图预览">
-                </div>
-                <div class="book-info">
-                    <h3>百年孤独</h3>                    <p>作者：</p >
-                    <p>价格：¥68.00</p >
-                </div>
-                <div class="book-actions">
-                    <button>加入购物车</button>
-                    <button>立即购买</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="mask">
-        <div class="loading">加载中...</div>
-    </div>
-    <div class="toast">操作成功！</div>
-    <script>
-        const indicators = document.querySelectorAll('.banner-indicators span');
-        const imgs = document.querySelectorAll('.banner-imgs img');
-        let currentIndex = 0;
-
-        function changeBanner() {
-            indicators.forEach((item, index) => {
-                item.classList.toggle('active', index === currentIndex);
-            });
-            imgs.forEach((item, index) => {
-                item.style.display = index === currentIndex ? 'block' : 'none';
-            });
-            currentIndex = (currentIndex + 1) % imgs.length;
-        }
-        setInterval(changeBanner, 3000);
-        const backTop = document.querySelector('.back-top');
-        backTop.addEventListener('click', () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-        function showToast() {
-            const toast = document.querySelector('.toast');
-            toast.style.display = 'block';
-            setTimeout(() => {
-                toast.style.display = 'none';
-            }, 2000);
-        }
-        document.querySelector('.cart').addEventListener('click', showToast);
-    </script>
 </body>
 </html>
