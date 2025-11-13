@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数字图书展销平台</title>
+    <link rel="stylesheet" href="5.css">
+    <body>
+    <!-- 导航栏 -->
+    <header>
+        <div class="logo">数字图书展销平台</div>
+        <nav>
+            <a href="#" class="login-link" onclick="showLoginForm()">登录/注册</a >
+        </nav>
+    </header>
+
+    <!-- 登录表单弹窗 -->
+    <div class="form-modal" id="loginModal">
+        <div class="form-container">
+            <span class="close-btn" onclick="hideLoginForm()">&times;</span>
+            <h2 class="form-title">用户登录</h2>
+            <form>
+                <label for="login-account">用户名/邮箱</label>
+                <input type="email" id="login-account" placeholder="请输入邮箱" required>
+
+                <label for="login-pwd">密码</label>
+                <input type="password" id="login-pwd" placeholder="请输入密码" required>
+
+                <div class="checkbox-group">
+                    <label><input type="checkbox"> 记住我</label>
+                </div>
+
+                <button type="submit" class="btn-submit">登录</button>
+                <p style="text-align: center; margin-top: 15px;">
+                    还没有账号？<a href="#" onclick="switchToRegister()">立即注册</a >
+                </p >
+            </form>
+        </div>
+    </div>
+
+    <!-- 图书推荐订阅表单区域 -->
+    <section class="form-section">
+        <h2 class="section-title">图书推荐订阅</h2>
+        <form action="#" method="post" enctype="multipart/form-data">
+            <!-- 文本输入框 -->
+            <label for="username">用户名</label>
+            <input type="text" id="username" placeholder="请输入用户名" required>
+
+            <label for="email">邮箱</label>
+            <input type="email" id="email" placeholder="请输入邮箱" required>
+
+            <label for="pwd">密码</label>
+            <input type="password" id="pwd" placeholder="请输入密码" required>
+
+            <!-- 单选框（性别） -->
+            <label>性别</label>
+            <div class="radio-group">
+                <label><input type="radio" name="gender" value="male" checked> 男</label>
+                <label><input type="radio" name="gender" value="female"> 女</label>
+            </div>
+
+            <!-- 复选框（兴趣） -->
+            <label>感兴趣的图书分类</label>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="category" value="novel"> 小说</label>
+                <label><input type="checkbox" name="category" value="tech"> 科技</label>
+                <label><input type="checkbox" name="category" value="history"> 历史</label>
+                <label><input type="checkbox" name="category" value="literature"> 文学</label>
+            </div>
+
+            <!-- 下拉列表（城市） -->
+            <label for="city">所在城市</label>
+            <select id="city" required>
+                <option value="">请选择城市</option>
+                <option value="beijing">北京</option>
+                <option value="shanghai">上海</option>
+                <option value="guangzhou">广州</option>
+                <option value="shenzhen">深圳</option>
+            </select>
+
+            <!-- 多行文本框（留言） -->
+            <label for="remark">留言/备注</label>
+            <textarea id="remark" placeholder="请输入您的留言"></textarea>
+
+            <!-- 文件上传（头像） -->
+            <label for="avatar">上传头像</label>
+            <input type="file" id="avatar" accept="image/*">
+
+            <!-- 按钮组 -->
+            <div class="btn-group">
+                <button type="submit" class="btn-submit">提交订阅</button>
+                <button type="reset" class="btn-reset">重置表单</button>
+            </div>
+        </form>
+    </section>
+
+    <script>
+        // 登录表单弹窗控制
+        function showLoginForm() {
+            document.getElementById("loginModal").style.display = "flex";
+        }
+        function hideLoginForm() {
+            document.getElementById("loginModal").style.display = "none";
+        }
+        // 模拟切换注册表单（实际项目需扩展注册表单内容）
+        function switchToRegister() {
+            alert("即将跳转到注册表单（实际项目中需替换为注册表单DOM）");
+        }
+    </script>
+</body>
+</html>
