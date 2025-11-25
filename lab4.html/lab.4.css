@@ -299,3 +299,86 @@ body {
 .promo-mask:hover {
     opacity: 1;
 }
+/* 基础样式重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: "微软雅黑", sans-serif;
+}
+
+/* 头部导航样式 */
+.header {
+    background-color: #333;
+    color: #fff;
+    padding: 15px 0;
+}
+.nav {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+.nav-right {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.icon {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    /* 图标过渡效果 */
+    transition: transform 0.5s ease;
+    -webkit-transition: transform 0.5s ease;
+}
+.icon img {
+    width: 100%;
+    height: 100%;
+}
+/* 图标悬停旋转（transform：旋转） */
+.cart-icon:hover, .search-icon:hover {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+}
+
+/* 登录按钮样式（transition+transform） */
+.login-btn {
+    padding: 8px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #4CAF50;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    /* 过渡效果：背景色+缩放 */
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+}
+.login-btn:hover {
+    /* 背景色渐变（实际用linear-gradient）+缩放 */
+    background: linear-gradient(to right, #4CAF50, #2196F3);
+    -webkit-background: linear-gradient(to right, #4CAF50, #2196F3);
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+}
+
+/* 轮播图样式（@keyframes关键帧动画） */
+.carousel {
+    width: 1200px;
+    height: 400px;
+    margin: 20px auto;
+    overflow: hidden;
+    position: relative;
+}
+.carousel-imgs {
+    width: 100%;
+    height: 100%;
+}

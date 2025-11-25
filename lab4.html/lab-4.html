@@ -6,11 +6,28 @@
     <title>秋分图书展销 - 首页</title>
     <link rel="stylesheet" href="lab.4.css">
     <link rel="stylesheet" href="iconfont.css">
+    <link rel="stylesheet" href="5.css">
+    <link rel="stylesheet" href="6.css">
 </head>
 <body>
     <header class="fixed-header">
         <div class="logo">秋分图书展销</div>
- <a href="lab.5.html" class="login-link" onclick="https:lab4.html/lab.5.html()">登录/注册</a >
+ <nav class="navbar">
+    <div class="container">
+    </div>
+     <header class="header">
+        <div class="nav container">
+            <a href="" class="login-link" id="showLogin">登录/注册</a
+            class="nav-actions">
+                <a href=" " class="icon search-icon">
+                    <img src="20.jpg" alt="搜索">
+                </a >
+                <a href="#" class="icon cart-icon">
+                    <img src="21.jpg" alt="购物车">
+                </a >
+            </div>
+        </div>
+  </nav>
         <nav class="main-nav">
             <ul>
                 <li class="dropdown">
@@ -138,6 +155,67 @@
                 <div class="promo-mask">
                     <p>限时<br>特惠</p >
                 </div>
+       <div class="modal" id="loginModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3>用户登录</h3>
+        <button class="close-btn" id="closeLogin">&times;</button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label>邮箱/用户名</label>
+            <input type="text" placeholder="请输入邮箱或用户名" required>
+          </div>
+          <div class="form-group">
+            <label>密码</label>
+            <input type="password" placeholder="请输入密码" required>
+          </div>
+          <div class="form-group remember-me">
+            <input type="checkbox" id="remember">
+            <label for="remember">记住我</label>
+          </div>
+          <button type="button" class="login-btn">登录</button>
+          <div class="register-link">
+            还没有账号? <a href="re.html">立即注册</a >
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="overlay" id="overlay"></div>
+
+
+  <script>
+    const showLogin = document.getElementById('showLogin');
+    const loginModal = document.getElementById('loginModal');
+    const closeLogin = document.getElementById('closeLogin');
+    const overlay = document.getElementById('overlay');
+    showLogin.addEventListener('click', (e) => {
+      e.preventDefault();
+      loginModal.style.display = 'block';
+      overlay.style.display = 'block';
+    });
+    closeLogin.addEventListener('click', () => {
+      loginModal.style.display = 'none';
+      overlay.style.display = 'none';
+    });
+    overlay.addEventListener('click', () => {
+      loginModal.style.display = 'none';
+      overlay.style.display = 'none';
+    });
+  </script>
+  <section class="carousel container">
+        <div class="carousel-wrapper">
+            <img src="17.jpg" alt="轮播图1" class="carousel-item">
+            <img src="18.jpg" alt="轮播图2" class="carousel-item">
+            <img src="19.jpg" alt="轮播图3" class="carousel-item">
+        </div>
+    </section>
+    </div>
+
+</body>
+</html>      
             </div>
         </aside>
     </div>

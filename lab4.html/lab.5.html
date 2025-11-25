@@ -1,111 +1,81 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>数字图书展销平台</title>
-    <link rel="stylesheet" href="5.css">
-    <body>
-    <!-- 导航栏 -->
-    <header>
-        <div class="logo">数字图书展销平台</div>
-        <nav>
-            <a href="#" class="login-link" onclick="showLoginForm()">登录/注册</a >
-        </nav>
-    </header>
-
-    <!-- 登录表单弹窗 -->
-    <div class="form-modal" id="loginModal">
-        <div class="form-container">
-            <span class="close-btn" onclick="hideLoginForm()">&times;</span>
-            <h2 class="form-title">用户登录</h2>
-            <form>
-                <label for="login-account">用户名/邮箱</label>
-                <input type="email" id="login-account" placeholder="请输入邮箱" required>
-
-                <label for="login-pwd">密码</label>
-                <input type="password" id="login-pwd" placeholder="请输入密码" required>
-
-                <div class="checkbox-group">
-                    <label><input type="checkbox"> 记住我</label>
-                </div>
-
-                <button type="submit" class="btn-submit">登录</button>
-                <p style="text-align: center; margin-top: 15px;">
-                    还没有账号？<a href="#" onclick="switchToRegister()">立即注册</a >
-                </p >
-            </form>
-        </div>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>数字图书展销平台</title>
+  <link rel="stylesheet" href="5.css">
+</head>
+<body>
+  <!-- 顶部导航栏 -->
+  <nav class="navbar">
+    <div class="container">
+      <!-- 登录/注册链接 -->
+      <a href="" class="login-link" id="showLogin">登录/注册</a >
     </div>
+  </nav>
 
-    <!-- 图书推荐订阅表单区域 -->
-    <section class="form-section">
-        <h2 class="section-title">图书推荐订阅</h2>
-        <form action="#" method="post" enctype="multipart/form-data">
-            <!-- 文本输入框 -->
-            <label for="username">用户名</label>
-            <input type="text" id="username" placeholder="请输入用户名" required>
 
-            <label for="email">邮箱</label>
-            <input type="email" id="email" placeholder="请输入邮箱" required>
-
-            <label for="pwd">密码</label>
-            <input type="password" id="pwd" placeholder="请输入密码" required>
-
-            <!-- 单选框（性别） -->
-            <label>性别</label>
-            <div class="radio-group">
-                <label><input type="radio" name="gender" value="male" checked> 男</label>
-                <label><input type="radio" name="gender" value="female"> 女</label>
-            </div>
-
-            <!-- 复选框（兴趣） -->
-            <label>感兴趣的图书分类</label>
-            <div class="checkbox-group">
-                <label><input type="checkbox" name="category" value="novel"> 小说</label>
-                <label><input type="checkbox" name="category" value="tech"> 科技</label>
-                <label><input type="checkbox" name="category" value="history"> 历史</label>
-                <label><input type="checkbox" name="category" value="literature"> 文学</label>
-            </div>
-
-            <!-- 下拉列表（城市） -->
-            <label for="city">所在城市</label>
-            <select id="city" required>
-                <option value="">请选择城市</option>
-                <option value="beijing">北京</option>
-                <option value="shanghai">上海</option>
-                <option value="guangzhou">广州</option>
-                <option value="shenzhen">深圳</option>
-            </select>
-
-            <!-- 多行文本框（留言） -->
-            <label for="remark">留言/备注</label>
-            <textarea id="remark" placeholder="请输入您的留言"></textarea>
-
-            <!-- 文件上传（头像） -->
-            <label for="avatar">上传头像</label>
-            <input type="file" id="avatar" accept="image/*">
-
-            <!-- 按钮组 -->
-            <div class="btn-group">
-                <button type="submit" class="btn-submit">提交订阅</button>
-                <button type="reset" class="btn-reset">重置表单</button>
-            </div>
+  <!-- 登录弹窗（默认隐藏） -->
+  <div class="modal" id="loginModal">
+    <div class="modal-content">
+      <!-- 弹窗头部 -->
+      <div class="modal-header">
+        <h3>用户登录</h3>
+        <button class="close-btn" id="closeLogin">&times;</button>
+      </div>
+      <!-- 弹窗表单 -->
+      <div class="modal-body">
+        <form>
+          <div class="form-group">
+            <label>邮箱/用户名</label>
+            <input type="text" placeholder="请输入邮箱或用户名" required>
+          </div>
+          <div class="form-group">
+            <label>密码</label>
+            <input type="password" placeholder="请输入密码" required>
+          </div>
+          <div class="form-group remember-me">
+            <input type="checkbox" id="remember">
+            <label for="remember">记住我</label>
+          </div>
+          <button type="button" class="login-btn">登录</button>
+          <div class="register-link">
+            还没有账号? <a href="register.html">立即注册</a >
+          </div>
         </form>
-    </section>
+      </div>
+    </div>
+  </div>
 
-    <script>
-        // 登录表单弹窗控制
-        function showLoginForm() {
-            document.getElementById("loginModal").style.display = "flex";
-        }
-        function hideLoginForm() {
-            document.getElementById("loginModal").style.display = "none";
-        }
-        // 模拟切换注册表单（实际项目需扩展注册表单内容）
-        function switchToRegister() {
-            alert("即将跳转到注册表单（实际项目中需替换为注册表单DOM）");
-        }
-    </script>
+
+  <!-- 遮罩层（弹窗显示时出现） -->
+  <div class="overlay" id="overlay"></div>
+
+
+  <script>
+    // 获取元素
+    const showLogin = document.getElementById('showLogin');
+    const loginModal = document.getElementById('loginModal');
+    const closeLogin = document.getElementById('closeLogin');
+    const overlay = document.getElementById('overlay');
+
+    // 显示登录弹窗
+    showLogin.addEventListener('click', (e) => {
+      e.preventDefault();
+      loginModal.style.display = 'block';
+      overlay.style.display = 'block';
+    });
+
+    // 关闭登录弹窗
+    closeLogin.addEventListener('click', () => {
+      loginModal.style.display = 'none';
+      overlay.style.display = 'none';
+    });
+    overlay.addEventListener('click', () => {
+      loginModal.style.display = 'none';
+      overlay.style.display = 'none';
+    });
+  </script>
 </body>
 </html>
