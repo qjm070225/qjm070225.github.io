@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数字图书展销平台</title>
+    <link rel="stylesheet" href="6.css">
+</head>
+<body>
+    <header class="header">
+        <div class="nav container">
+            <h1 class="logo">图书展销平台</h1>
+            <div class="nav-actions">
+                <a href=" " class="icon search-icon">
+                    <img src="images/search.png" alt="搜索">
+                </a >
+                <a href="#" class="icon cart-icon">
+                    <img src="images/cart.png" alt="购物车">
+                </a >
+                <button class="login-btn">登录</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- 轮播图区域（@keyframes实现） -->
+    <section class="carousel container">
+        <div class="carousel-wrapper">
+            <img src="images/banner1.jpg" alt="轮播图1" class="carousel-item">
+            <img src="images/banner2.jpg" alt="轮播图2" class="carousel-item">
+            <img src="images/banner3.jpg" alt="轮播图3" class="carousel-item">
+        </div>
+    </section>
+
+    <!-- 图书列表区域（transform动效） -->
+    <section class="book-section container">
+        <h2 class="section-title">热门图书</h2>
+        <div class="book-list">
+            <div class="book-item">
+                <img src="images/book1.jpg" alt="《前端开发实战》" class="book-img">
+                <p class="book-name">《前端开发实战》</p >
+            </div>
+            <div class="book-item">
+                <img src="images/book2.jpg" alt="《CSS3动画指南》" class="book-img">
+                <p class="book-name">《CSS3动画指南》</p >
+            </div>
+            <div class="book-item">
+                <img src="images/book3.jpg" alt="《JavaScript进阶》" class="book-img">
+                <p class="book-name">《JavaScript进阶》</p >
+            </div>
+        </div>
+    </section>
+</body>
+</html>

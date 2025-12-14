@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>数字展销平台首页—秋分</title>
+    <link rel="stylesheet" href="lab14.css"> <!-- 外部CSS -->
+</head>
+<body>
+    <!-- 固定导航栏（固定定位） -->
+    <header class="header">
+        <div class="logo">
+            <h1>秋分图书展销</h1>
+        </div>
+        <!-- 下拉菜单（相对+绝对定位） -->
+        <nav class="nav">
+            <ul>
+                <li class="dropdown">
+                    <a href=" ">图书分类 ▾</a >
+                    <div class="dropdown-content">
+                        <a href="#">小说</a >
+                        <a href="#">科技</a >
+                        <a href="#">人文</a >
+                        <a href="#">艺术</a >
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#">价格筛选 ▾</a >
+                    <div class="dropdown-content">
+                        <a href="#">0-50元</a >
+                        <a href="#">50-100元</a >
+                        <a href="#">100元以上</a >
+                    </div>
+                </li>
+                <li><a href="#">促销活动</a ></li>
+                <li><a href="#">关于我们</a ></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 主体三栏布局 -->
+    <main class="main">
+        <!-- 左侧栏（相对定位） -->
+        <aside class="left-bar">
+            <h2>图书分类导航</h2>
+            <ul class="category-list">
+                <li><a href="#">文学小说</a ></li>
+                <li><a href="#">计算机科技</a ></li>
+                <li><a href="#">历史人文</a ></li>
+                <li><a href="#">艺术设计</a ></li>
+                <li><a href="#">生活百科</a ></li>
+            </ul>
+        </aside>
+
+        <!-- 中间栏（盒子模型+交互） -->
+        <section class="middle-bar">
+            <div class="section-title">热门推荐</div>
+            <div class="hot-books">
+                <!-- 图书卡片（鼠标悬停放大+遮罩） -->
+                <div class="book-card">
+                    <div class="book-img">
+                        <img src="12.jpg" alt="病隙随笔">
+                        <!-- 遮罩层（半透明+隐藏内容） -->
+                        <div class="book-mask">
+                            <h3>《病隙随笔》</h3>
+                            <p>价格：59元</p >
+                            <p>评分：9.2</p >
+                        </div>
+                    </div>
+                    <p>《病隙随笔》</p >
+                </div>
+                <div class="book-card">
+                    <div class="book-img">
+                        <img src="11.jpg" alt="我与地坛">
+                        <div class="book-mask">
+                            <h3>《我与地坛》</h3>
+                            <p>价格：45元</p >
+                            <p>评分：9.5</p >
+                        </div>
+                    </div>
+                    <p>《我与地坛》</p >
+                </div>
+                <div class="book-card">
+                    <div class="book-img">
+                        <img src="14.jpg" alt="雪国">
+                        <div class="book-mask">
+                            <h3>《雪国》</h3>
+                            <p>价格：68元</p >
+                            <p>评分：8.8</p >
+                        </div>
+                    </div>
+                    <p>《雪国》</p >
+                </div>
+                <div class="book-card">
+                    <div class="book-img">
+                        <img src="13.jpg" alt="务虚笔记">
+                        <div class="book-mask">
+                            <h3>《务虚笔记》</h3>
+                            <p>价格：89元</p >
+                            <p>评分：9.0</p >
+                        </div>
+                    </div>
+                    <p>《务虚笔记》</p >
+                </div>
+            </div>
+
+            <!-- 新书上市（Table布局） -->
+            <div class="section-title">新书上市</div>
+            <table class="new-books">
+                <thead>
+                    <tr>
+                        <th>图书名称</th>
+                        <th>分类</th>
+                        <th>价格</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>《AI时代与人类未来》</td>
+                        <td>科技</td>
+                        <td>79元</td>
+                    </tr>
+                    <tr>
+                        <td>《长安的荔枝》</td>
+                        <td>小说</td>
+                        <td>42元</td>
+                    </tr>
+                    <tr>
+                        <td>《人类简史》</td>
+                        <td>人文</td>
+                        <td>65元</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- 右侧栏（促销信息） -->
+        <aside class="right-bar">
+            <div class="promo-title">限时促销</div>
+            <div class="promo-card">
+                <div class="promo-badge">满减</div>
+                <p>全场图书<br>满100减20<br>满200减50</p >
+                <span>活动时间：11.1-11.11</span>
+            </div>
+            <div class="promo-card">
+                <div class="promo-badge">赠品</div>
+                <p>购买任意科技类图书<br>送定制笔记本1本</p >
+                <span>数量有限，先到先得</span>
+            </div>
+        </aside>
+</div>
+</body>
+</html>
