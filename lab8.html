@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab8-01-index.html</title>
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="8.css">
+</head>
+<body>
+    <!-- 头部导航 -->
+    <header class="fixed-header">
+        <div class="logo">数字图书展销平台</div>
+        <!-- 智能搜索框 -->
+        <div class="search-box">
+            <input type="text" class="search-input" id="searchInput" placeholder="搜索图书（书名/作者/分类）">
+            <div class="search-result" id="searchResult"></div>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-btn">图书分类</a>
+                    <div class="dropdown-menu">
+                        <a href="#"><i class="fas fa-book"></i> 文学小说</a>
+                        <a href="#"><i class="fas fa-laptop"></i> 计算机科技</a>
+                        <a href="#"><i class="fas fa-landmark"></i> 历史人文</a>
+                        <a href="#"><i class="fas fa-palette"></i> 艺术设计</a>
+                        <a href="#"><i class="fas fa-apple-alt"></i> 生活百科</a>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-btn">价格筛选</a>
+                    <div class="dropdown-menu">
+                        <a href="#">0-50元</a>
+                        <a href="#">50-100元</a>
+                        <a href="#">100元以上</a>
+                    </div>
+                </li>
+                <li><a href="#">促销活动</a></li>
+                <li><a href="#">关于我们</a></li>
+                <li><a href="#" class="login-link" id="showLogin">登录/注册</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 主体内容 -->
+    <div class="container">
+        <div class="main-layout">
+            <!-- 左侧分类栏 -->
+            <aside class="left-bar">
+                <h3>图书分类导航</h3>
+                <ul class="category-list">
+                    <li><a href="#"><i class="fas fa-book"></i> 文学小说</a></li>
+                    <li><a href="#"><i class="fas fa-laptop"></i> 计算机科技</a></li>
+                    <li><a href="#"><i class="fas fa-landmark"></i> 历史人文</a></li>
+                    <li><a href="#"><i class="fas fa-palette"></i> 艺术设计</a></li>
+                    <li><a href="#"><i class="fas fa-apple-alt"></i> 生活百科</a></li>
+                </ul>
+            </aside>
+
+            <!-- 中间主内容区 -->
+            <main class="middle-content">
+                <!-- 轮播图 -->
+                <section class="carousel">
+                    <div class="carousel-wrapper">
+                        <img src="https://picsum.photos/id/24/1200/420" alt="图书展销banner1" class="carousel-item">
+                        <img src="https://picsum.photos/id/20/1200/420" alt="图书展销banner2" class="carousel-item">
+                        <img src="https://picsum.photos/id/42/1200/420" alt="图书展销banner3" class="carousel-item">
+                    </div>
+                </section>
+
+                <!-- 3D翻转图书卡片 -->
+                <section class="card-3d-section">
+                    <h2 class="section-title">3D翻牌图书推荐</h2>
+                    <div class="card-3d-group">
+                        <!-- 图书1 -->
+                        <div class="book-card-3d">
+                            <div class="card-inner">
+                                <div class="card-front">
+                                    <img src="https://picsum.photos/id/24/220/320" alt="病隙碎笔">
+                                </div>
+                                <div class="card-back">
+                                    <h4>《病隙碎笔》</h4>
+                                    <div class="price">¥45.00</div>
+                                    <div class="rating">★★★★★</div>
+                                    <p class="desc">史铁生的散文代表作，在病痛的间隙中思考人生、命运、信仰，文字质朴而深刻。</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 图书2 -->
+                        <div class="book-card-3d">
+                            <div class="card-inner">
+                                <div class="card-front">
+                                    <img src="https://picsum.photos/id/20/220/320" alt="我与地坛">
+                                </div>
+                                <div class="card-back">
+                                    <h4>《我与地坛》</h4>
+                                    <div class="price">¥39.80</div>
+                                    <div class="rating">★★★★★</div>
+                                    <p class="desc">史铁生的生命独白，记录在地坛的所思所感，探讨生死与救赎，文字真挚动人。</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 图书3 -->
+                        <div class="book-card-3d">
+                            <div class="card-inner">
+                                <div class="card-front">
+                                    <img src="https://picsum.photos/id/42/220/320" alt="雪国">
+                                </div>
+                                <div class="card-back">
+                                    <h4>《雪国》</h4>
+                                    <div class="price">¥42.00</div>
+                                    <div class="rating">★★★★☆</div>
+                                    <p class="desc">川端康成诺贝尔文学奖作品，以唯美笔触描绘雪国的清冷，展现日式美学极致。</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 图书4 -->
+                        <div class="book-card-3d">
+                            <div class="card-inner">
+                                <div class="card-front">
+                                    <img src="https://picsum.photos/id/18/220/320" alt="AI时代与人类未来">
+                                </div>
+                                <div class="card-back">
+                                    <h4>《AI时代与人类未来》</h4>
+                                    <div class="price">¥69.00</div>
+                                    <div class="rating">★★★★☆</div>
+                                    <p class="desc">深度解析AI对人类社会的影响，预测科技与人文的融合方向，兼具专业与可读。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 3D环形图书展示 -->
+                <section class="ring-3d-section">
+                    <h2 class="section-title">3D环形热门图书</h2>
+                    <div class="ring-container">
+                        <div class="ring">
+                            <div class="ring-item"><img src="https://picsum.photos/id/1/120/180" alt="图书1"></div>
+                            <div class="ring-item"><img src="https://picsum.photos/id/2/120/180" alt="图书2"></div>
+                            <div class="ring-item"><img src="https://picsum.photos/id/3/120/180" alt="图书3"></div>
+                            <div class="ring-item"><img src="https://picsum.photos/id/4/120/180" alt="图书4"></div>
+                            <div class="ring-item"><img src="https://picsum.photos/id/5/120/180" alt="图书5"></div>
+                            <div class="ring-item"><img src="https://picsum.photos/id/6/120/180" alt="图书6"></div>
+                            <div class="ring-item"><img src="https://picsum.photos/id/7/120/180" alt="图书7"></div>
+                            <div class="ring-item"><img src="https://picsum.photos/id/8/120/180" alt="图书8"></div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 新书上市 -->
+                <section class="card-3d-section">
+                    <h2 class="section-title">新书上市</h2>
+                    <table class="new-book-table">
+                        <thead>
+                            <tr>
+                                <th>新书名称</th>
+                                <th>原价</th>
+                                <th>分类</th>
+                                <th>现价</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>《AI时代与人类未来》</td>
+                                <td>¥79.00</td>
+                                <td>科技</td>
+                                <td>¥69.00</td>
+                            </tr>
+                            <tr>
+                                <td>《长安的荔枝》</td>
+                                <td>¥42.00</td>
+                                <td>小说</td>
+                                <td>¥35.00</td>
+                            </tr>
+                            <tr>
+                                <td>《人类简史》（修订版）</td>
+                                <td>¥65.00</td>
+                                <td>人文</td>
+                                <td>¥55.00</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <!-- 促销横幅 -->
+                <section class="banner">
+                    <p>数字图书展销 · 全场8折起</p>
+                    <p>活动时间：11.1-11.11 | 满100减20 上不封顶</p>
+                </section>
+            </main>
+
+            <!-- 右侧边栏（登录表单） -->
+            <aside class="right-bar">
+                <div class="promo">
+                    <h3>限时促销</h3>
+                    <div class="promo-item">
+                        <div class="promo-title">全场图书满减</div>
+                        <div class="promo-desc">满100减20<br>满200减50<br>活动时间：11.1-11.11</div>
+                    </div>
+                    <div class="promo-item">
+                        <div class="promo-title">科技类图书赠品</div>
+                        <div class="promo-desc">购任意科技类图书<br>送定制笔记本1本<br>数量有限，先到先得</div>
+                    </div>
+                    <div class="promo-mask">
+                        <p>限时</p>
+                        <p>特惠</p>
+                    </div>
+                </div>
+
+                <div class="login-card">
+                    <h3>用户登录</h3>
+                    <form id="loginForm">
+                        <div class="form-group">
+                            <label for="username">邮箱/手机号</label>
+                            <input type="text" id="username" placeholder="请输入邮箱或手机号" required>
+                            <div class="tip-text" id="usernameTip"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">密码</label>
+                            <input type="password" id="password" placeholder="请输入密码（6-16位）" required>
+                            <div class="tip-text" id="passwordTip"></div>
+                            <div class="password-strength">
+                                <div class="strength-bar" id="strength1"></div>
+                                <div class="strength-bar" id="strength2"></div>
+                                <div class="strength-bar" id="strength3"></div>
+                            </div>
+                        </div>
+                        <div class="form-group remember-me">
+                            <input type="checkbox" id="remember">
+                            <label for="remember">记住我</label>
+                        </div>
+                        <button type="button" class="login-btn" id="loginBtn">登录</button>
+                        <div class="register-link">
+                            还没有账号? <a href="#">立即注册</a>
+                        </div>
+                    </form>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <!-- 3D页脚 -->
+    <footer>
+        <div class="footer-container">
+            <div class="copyright">© 2025 数字图书展销平台 版权所有 | 京ICP备12345678号</div>
+            <div class="social-icons">
+                <div class="social-icon"><i class="fab fa-weixin"></i></div>
+                <div class="social-icon"><i class="fab fa-weibo"></i></div>
+                <div class="social-icon"><i class="fab fa-qq"></i></div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 交互脚本 -->
+    <script>
+        // 图书数据
+        const bookData = [
+            { id: 1, name: '病隙碎笔', author: '史铁生', price: 45, category: '文学', cover: 'https://picsum.photos/id/24/220/320' },
+            { id: 2, name: '我与地坛', author: '史铁生', price: 39.8, category: '文学', cover: 'https://picsum.photos/id/20/220/320' },
+            { id: 3, name: '雪国', author: '川端康成', price: 42, category: '文学', cover: 'https://picsum.photos/id/42/220/320' },
+            { id: 4, name: 'AI时代与人类未来', author: '李开复', price: 69, category: '科技', cover: 'https://picsum.photos/id/18/220/320' },
+            { id: 5, name: '长安的荔枝', author: '马伯庸', price: 35, category: '小说', cover: 'https://picsum.photos/id/29/220/320' },
+            { id: 6, name: '人类简史', author: '尤瓦尔·赫拉利', price: 55, category: '人文', cover: 'https://picsum.photos/id/36/220/320' }
+        ];
+
+        // 用户构造函数
+        function User(username, password, isLogin = false) {
+            this.username = username;
+            this.password = password;
+            this.isLogin = isLogin;
+            this.login = function() {
+                this.isLogin = true;
+                console.log(`${this.username} 登录成功`);
+            };
+            this.logout = function() {
+                this.isLogin = false;
+                console.log(`${this.username} 退出登录`);
+            };
+        }
+
+        // 智能搜索功能
+        const searchInput = document.getElementById('searchInput');
+        const searchResult = document.getElementById('searchResult');
+
+        searchInput.addEventListener('input', function() {
+            const keyword = this.value.trim().toLowerCase();
+            searchResult.innerHTML = '';
+            if (!keyword) {
+                searchResult.style.display = 'none';
+                return;
+            }
+
+            const matchBooks = bookData.filter(book => 
+                book.name.toLowerCase().includes(keyword) || 
+                book.author.toLowerCase().includes(keyword) || 
+                book.category.toLowerCase().includes(keyword)
+            );
+
+            if (matchBooks.length === 0) {
+                searchResult.innerHTML = '<div class="search-result-item">暂无匹配图书</div>';
+                searchResult.style.display = 'block';
+                return;
+            }
+
+            matchBooks.forEach(book => {
+                const item = document.createElement('div');
+                item.className = 'search-result-item';
+                item.innerHTML = `<strong>${book.name}</strong> - ${book.author} (${book.category})`;
+                item.addEventListener('click', () => {
+                    searchInput.value = book.name;
+                    searchResult.style.display = 'none';
+                    alert(`你选择了《${book.name}》，价格：¥${book.price}`);
+                });
+                searchResult.appendChild(item);
+            });
+            searchResult.style.display = 'block';
+        });
+
+        // 点击空白处关闭搜索结果
+        document.addEventListener('click', (e) => {
+            if (!searchInput.contains(e.target) && !searchResult.contains(e.target)) {
+                searchResult.style.display = 'none';
+            }
+        });
+
+        // 登录表单验证
+        const regEmail = /^[a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+        const regPhone = /^1[3-9]\d{9}$/;
+        const regPwd = /^.{6,16}$/;
+
+        const username = document.getElementById('username');
+        const usernameTip = document.getElementById('usernameTip');
+        const password = document.getElementById('password');
+        const passwordTip = document.getElementById('passwordTip');
+        const strength1 = document.getElementById('strength1');
+        const strength2 = document.getElementById('strength2');
+        const strength3 = document.getElementById('strength3');
+        const loginBtn = document.getElementById('loginBtn');
+
+        // 验证用户名
+        function checkUsername() {
+            const val = username.value.trim();
+            if (!val) {
+                usernameTip.textContent = '请输入邮箱或手机号';
+                usernameTip.className = 'tip-text tip-error';
+                username.className = 'input-error';
+                return false;
+            } else if (regEmail.test(val) || regPhone.test(val)) {
+                usernameTip.textContent = '格式正确';
+                usernameTip.className = 'tip-text tip-success';
+                username.className = 'input-success';
+                return true;
+            } else {
+                usernameTip.textContent = '邮箱或手机号格式错误';
+                usernameTip.className = 'tip-text tip-error';
+                username.className = 'input-error';
+                return false;
+            }
+        }
+
+        // 验证密码强度
+        function checkPassword() {
+            const val = password.value;
+            // 重置强度条
+            [strength1, strength2, strength3].forEach(bar => {
+                bar.className = 'strength-bar';
+            });
+
+            if (!val) {
+                passwordTip.textContent = '请输入密码';
+                passwordTip.className = 'tip-text tip-error';
+                password.className = 'input-error';
+                return false;
+            } else if (!regPwd.test(val)) {
+                passwordTip.textContent = '密码长度需6-16位';
+                passwordTip.className = 'tip-text tip-error';
+                password.className = 'input-error';
+                return false;
+            }
+
+            // 计算密码强度
+            let strength = 0;
+            if (/[a-z]/.test(val)) strength++;
+            if (/[A-Z]/.test(val)) strength++;
+            if (/[0-9]/.test(val)) strength++;
+            if (/[^a-zA-Z0-9]/.test(val)) strength++;
+
+            if (strength <= 2) {
+                passwordTip.textContent = '密码强度：弱';
+                passwordTip.className = 'tip-text tip-error';
+                strength1.classList.add('strength-weak');
+            } else if (strength === 3) {
+                passwordTip.textContent = '密码强度：中';
+                passwordTip.className = 'tip-text';
+                [strength1, strength2].forEach(bar => bar.classList.add('strength-middle'));
+            } else {
+                passwordTip.textContent = '密码强度：强';
+                passwordTip.className = 'tip-text tip-success';
+                [strength1, strength2, strength3].forEach(bar => bar.classList.add('strength-strong'));
+            }
+            password.className = 'input-success';
+            return true;
+        }
+
+        // 绑定验证事件
+        username.addEventListener('blur', checkUsername);
+        password.addEventListener('input', checkPassword);
+
+        // 登录按钮点击
+        loginBtn.addEventListener('click', () => {
+            const isUserOk = checkUsername();
+            const isPwdOk = checkPassword();
+
+            if (isUserOk && isPwdOk) {
+                const user = new User(username.value, password.value);
+                user.login();
+                alert('登录成功！');
+            } else {
+                alert('请完善登录信息！');
+            }
+        });
+
+        // 轮播图交互
+        const carousel = document.querySelector('.carousel');
+        const carouselWrapper = document.querySelector('.carousel-wrapper');
+        carousel.addEventListener('mouseenter', () => {
+            carouselWrapper.style.animationPlayState = 'paused';
+        });
+        carousel.addEventListener('mouseleave', () => {
+            carouselWrapper.style.animationPlayState = 'running';
+        });
+    </script>
+</body>
+</html>
