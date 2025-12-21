@@ -9,215 +9,250 @@
     <link rel="stylesheet" href="5.css">
     <link rel="stylesheet" href="6.css">
 </head>
-<body>
     <header class="fixed-header">
         <div class="logo">秋分图书展销</div>
- <nav class="navbar">
-    <div class="container">
-    </div>
-     <header class="header">
-        <div class="nav container">
-            <a href="" class="login-link" id="showLogin">登录/注册</a
-            class="nav-actions">
-                <a href=" " class="icon search-icon">
-                    <img src="20.jpg" alt="搜索">
-                </a >
-                <a href="#" class="icon cart-icon">
-                    <img src="21.jpg" alt="购物车">
-                </a >
-            </div>
-        </div>
-  </nav>
+        <nav class="user-nav">
+            <a href="#" class="login-link" id="showLogin">登录/注册</a>
+        </nav>
         <nav class="main-nav">
             <ul>
                 <li class="dropdown">
-                    <a href class="dropdown-btn">图书分类 ▾</a >
+                <i class="iconfont"></i>
+                    <a href="#" class="dropdown-btn">图书分类</a>
                     <div class="dropdown-menu">
-                        <a href="#"><span class="iconfont icon-tubiao1shuxiaoshuo"></span>文学小说</a>
+                        <a href="iconfont">&#xe606;<span class="iconfont icon-tubiao1shuxiaoshuo"></span>文学小说</a>
                         <a href="#"><span class="iconfont icon-tubiao1shuxiaoshuo"></span>计算机科技</a>
                         <a href="#"><span class="iconfont icon-tubiao1shuxiaoshuo"></span>历史人文</a>
                         <a href="#"><span class="iconfont icon-tubiao1shuxiaoshuo"></span>艺术设计</a>
-                        <a href="#"><span class="iconfont icon-tubiao1shuxiaoshuo"></span>生活百科</a >
+                        <a href="#"><span class="iconfont icon-tubiao1shuxiaoshuo"></span>生活百科</a>
                     </div>
                 </li>
                 <li class="dropdown">
-                    <a href="#" class="dropdown-btn">价格筛选 ▾</a >
+                    <a href="#" class="dropdown-btn">价格筛选</a>
                     <div class="dropdown-menu">
-                        <a href="#">0-50元</a >
-                        <a href="#">50-100元</a >
-                        <a href="#">100元以上</a >
+                        <a href="#">0-50元</a>
+                        <a href="#">50-100元</a>
+                        <a href="#">100元以上</a>
                     </div>
                 </li>
-                <li><a href="#">促销活动</a ></li>
-                <li><a href="#">关于我们</a ></li>
+                <li><a href="#">促销活动</a></li>
+                <li><a href="#">关于我们</a></li>
             </ul>
         </nav>
     </header>
     <div class="container">
-        <aside class="left-bar">
-            <h3>图书分类导航</h3>
-            <ul class="category-list">
-                <li><a href="#">文学小说</a ></li>
-                <li><a href="#">计算机科技</a ></li>
-                <li><a href="#">历史人文</a ></li>
-                <li><a href="#">艺术设计</a ></li>
-                <li><a href="#">生活百科</a ></li>
-            </ul>
-        </aside>
-        <main class="middle-content">
-            <section class="hot-recommend">
-                <h2>热门推荐</h2>
-                <div class="book-card-group">
-                    <div class="book-card">
-                        <div class="book-img" title="点击查看详情">
-                            <img src="12.jpg" alt="病隙碎笔">
-                            <div class="img-preview">
-                                <img src="12.jpg" alt="病隙碎笔预览">
-                                <p class="preview-desc">《病隙碎笔》是史铁生的散文代表作，充满生命哲思</p >
-                            </div>
-                        </div>
-                        <h4>《病隙碎笔》</h4>
-                        <p class="book-sub"></p >
+        <div class="main-layout">
+            <aside class="left-bar">
+                <h3>图书分类导航</h3>
+                <ul class="category-list">
+                    <li><a href="#">文学小说</a></li>
+                    <li><a href="#">计算机科技</a></li>
+                    <li><a href="#">历史人文</a></li>
+                    <li><a href="#">艺术设计</a></li>
+                    <li><a href="#">生活百科</a></li>
+                </ul>
+            </aside>
+            <main class="middle-content">
+                <section class="carousel">
+                    <div class="carousel-wrapper">
+                        <img src="17.jpg" alt="秋分图书展销 - 品质阅读" class="carousel-item">
+                        <img src="18.jpg" alt="全场图书8折起" class="carousel-item">
+                        <img src="19.jpg" alt="新品图书抢先购" class="carousel-item">
                     </div>
-                    <div class="book-card">
-                        <div class="book-img" title="点击查看详情">
-                            <img src="11.jpg" alt="我与地坛">
-                            <div class="img-preview">
-                                <img src="11.jpg" alt="我与地坛预览">
-                                <p class="preview-desc">《我与地坛》是史铁生的生命独白，感动无数读者</p >
-                            </div>
-                        </div>
-                        <h4>《我与地坛》</h4>
-                        <p class="book-sub"></p >
-                    </div>
-                    <div class="book-card">
-                        <div class="book-img" title="点击查看详情">
-                            <img src="13.jpg" alt="雪国">
-                            <div class="img-preview">
-                                <img src="13.jpg" alt="雪国预览">
-                                <p class="preview-desc">《雪国》是川端康成的诺贝尔文学奖作品，唯美哀婉</p >
-                            </div>
-                        </div>
-                        <h4>《雪国》</h4>
-                        <p class="book-sub"></p>
-                    </div>
-                </div>
-            </section>
-            <section class="new-books">
-                <h2>新书上市</h2>
-                <table class="new-book-table">
-                    <thead>
-                        <tr>
-                            <th>新书名称</th>
-                            <th>原价</th>
-                            <th>分类</th>
-                            <th>现价</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>《AI时代与人类未来》</td>
-                            <td>¥79</td>
-                            <td>科技</td>
-                            <td>¥69</td>
-                        </tr>
-                        <tr>
-                            <td>《长安的荔枝》</td>
-                            <td>¥42</td>
-                            <td>小说</td>
-                            <td>¥35</td>
-                        </tr>
-                        <tr>
-                            <td>《人类简史》</td>
-                            <td>¥65</td>
-                            <td>人文</td>
-                            <td>¥55</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
-            <div class="banner">
-                <p>秋分图书展销 · 全场8折起</p >
-                <p>活动时间：11.1-11.11 | 满100减20 上不封顶</p >
-            </div>
-        </main>
-        <aside class="right-bar">
-            <div class="promo">
-                <h3>限时促销</h3>
-                <div class="promo-item orange">
-                    <div class="promo-title">全场图书满减</div>
-                    <div class="promo-desc">满100减20<br>满200减50<br>活动时间：11.1-11.11</div>
-                </div>
-                <div class="promo-item orange">
-                    <div class="promo-title">科技类图书赠品</div>
-                    <div class="promo-desc">购任意科技类图书<br>送定制笔记本1本<br>数量有限，先到先得</div>
-                </div>
-                <div class="promo-mask">
-                    <p>限时<br>特惠</p >
-                </div>
-       <div class="modal" id="loginModal">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h3>用户登录</h3>
-        <button class="close-btn" id="closeLogin">&times;</button>
-      </div>
-      <div class="modal-body">
-        <form>
-          <div class="form-group">
-            <label>邮箱/用户名</label>
-            <input type="text" placeholder="请输入邮箱或用户名" required>
-          </div>
-          <div class="form-group">
-            <label>密码</label>
-            <input type="password" placeholder="请输入密码" required>
-          </div>
-          <div class="form-group remember-me">
-            <input type="checkbox" id="remember">
-            <label for="remember">记住我</label>
-          </div>
-          <button type="button" class="login-btn">登录</button>
-          <div class="register-link">
-            还没有账号? <a href="re.html">立即注册</a >
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-  <div class="overlay" id="overlay"></div>
+                </section>
 
+                <!-- 热门推荐 -->
+                <section class="section-card hot-recommend">
+                    <h2 class="section-title">热门推荐</h2>
+                    <div class="book-card-group">
+                        <div class="book-card">
+                            <div class="book-img" title="点击查看详情">
+                                <img src="12.jpg" alt="病隙碎笔">
+                                <div class="img-preview">
+                                    <img src="12.jpg" alt="病隙碎笔预览">
+                                    <p class="preview-desc">《病隙碎笔》是史铁生的散文代表作，充满生命哲思，在病痛的间隙中思考人生、命运、信仰，文字质朴而深刻，是中国当代散文的经典之作。</p>
+                                </div>
+                            </div>
+                            <div class="book-info">
+                                <h4>《病隙碎笔》</h4>
+                                <div class="book-meta">
+                                    <span class="book-price">¥45.00</span>
+                                    <span class="book-rating">★★★★★</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="book-card">
+                            <div class="book-img" title="点击查看详情">
+                                <img src="11.jpg" alt="我与地坛">
+                                <div class="img-preview">
+                                    <img src="11.jpg" alt="我与地坛预览">
+                                    <p class="preview-desc">《我与地坛》是史铁生的生命独白，记录了作者在地坛公园的所思所感，探讨生死、苦难与救赎，文字真挚动人，感动无数读者。</p>
+                                </div>
+                            </div>
+                            <div class="book-info">
+                                <h4>《我与地坛》</h4>
+                                <div class="book-meta">
+                                    <span class="book-price">¥39.80</span>
+                                    <span class="book-rating">★★★★★</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="book-card">
+                            <div class="book-img" title="点击查看详情">
+                                <img src="13.jpg" alt="雪国">
+                                <div class="img-preview">
+                                    <img src="13.jpg" alt="雪国预览">
+                                    <p class="preview-desc">《雪国》是川端康成的诺贝尔文学奖作品，以唯美哀婉的笔触描绘雪国的清冷与孤寂，展现日式美学的极致，是世界文学的经典之作。</p>
+                                </div>
+                            </div>
+                            <div class="book-info">
+                                <h4>《雪国》</h4>
+                                <div class="book-meta">
+                                    <span class="book-price">¥42.00</span>
+                                    <span class="book-rating">★★★★☆</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
 
-  <script>
-    const showLogin = document.getElementById('showLogin');
-    const loginModal = document.getElementById('loginModal');
-    const closeLogin = document.getElementById('closeLogin');
-    const overlay = document.getElementById('overlay');
-    showLogin.addEventListener('click', (e) => {
-      e.preventDefault();
-      loginModal.style.display = 'block';
-      overlay.style.display = 'block';
-    });
-    closeLogin.addEventListener('click', () => {
-      loginModal.style.display = 'none';
-      overlay.style.display = 'none';
-    });
-    overlay.addEventListener('click', () => {
-      loginModal.style.display = 'none';
-      overlay.style.display = 'none';
-    });
-  </script>
-  <section class="carousel container">
-        <div class="carousel-wrapper">
-            <img src="17.jpg" alt="轮播图1" class="carousel-item">
-            <img src="18.jpg" alt="轮播图2" class="carousel-item">
-            <img src="19.jpg" alt="轮播图3" class="carousel-item">
+                <!-- 新书上市 -->
+                <section class="section-card new-books">
+                    <h2 class="section-title">新书上市</h2>
+                    <table class="new-book-table">
+                        <thead>
+                            <tr>
+                                <th>新书名称</th>
+                                <th>原价</th>
+                                <th>分类</th>
+                                <th>现价</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>《AI时代与人类未来》</td>
+                                <td>¥79.00</td>
+                                <td>科技</td>
+                                <td>¥69.00</td>
+                            </tr>
+                            <tr>
+                                <td>《长安的荔枝》</td>
+                                <td>¥42.00</td>
+                                <td>小说</td>
+                                <td>¥35.00</td>
+                            </tr>
+                            <tr>
+                                <td>《人类简史》（修订版）</td>
+                                <td>¥65.00</td>
+                                <td>人文</td>
+                                <td>¥55.00</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <!-- 促销横幅 -->
+                <section class="banner">
+                    <p>秋分图书展销 · 全场8折起</p>
+                    <p>活动时间：11.1-11.11 | 满100减20 上不封顶</p>
+                </section>
+            </main>
+
+            <!-- 右侧边栏 -->
+            <aside class="right-bar">
+                <div class="promo">
+                    <h3>限时促销</h3>
+                    <div class="promo-item">
+                        <div class="promo-title">全场图书满减</div>
+                        <div class="promo-desc">满100减20<br>满200减50<br>活动时间：11.1-11.11</div>
+                    </div>
+                    <div class="promo-item">
+                        <div class="promo-title">科技类图书赠品</div>
+                        <div class="promo-desc">购任意科技类图书<br>送定制笔记本1本<br>数量有限，先到先得</div>
+                    </div>
+                    <div class="promo-mask">
+                        <p>限时</p>
+                        <p>特惠</p>
+                    </div>
+                </div>
+            </aside>
         </div>
-    </section>
     </div>
 
-</body>
-</html>      
+    <!-- 登录弹窗 -->
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>用户登录</h3>
+                <button class="close-btn" id="closeLogin">&times;</button>
             </div>
-        </aside>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <label>邮箱/用户名</label>
+                        <input type="text" placeholder="请输入邮箱或用户名" required>
+                    </div>
+                    <div class="form-group">
+                        <label>密码</label>
+                        <input type="password" placeholder="请输入密码" required>
+                    </div>
+                    <div class="form-group remember-me">
+                        <input type="checkbox" id="remember">
+                        <label for="remember">记住我</label>
+                    </div>
+                    <button type="button" class="login-btn">登录</button>
+                    <div class="register-link">
+                        还没有账号? <a href="re.html">立即注册</a>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
+
+    <!-- 遮罩层 -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- 交互脚本 -->
+    <script>
+        // 登录弹窗交互
+        const showLogin = document.getElementById('showLogin');
+        const loginModal = document.getElementById('loginModal');
+        const closeLogin = document.getElementById('closeLogin');
+        const overlay = document.getElementById('overlay');
+
+        showLogin.addEventListener('click', (e) => {
+            e.preventDefault();
+            loginModal.style.display = 'block';
+            overlay.style.display = 'block';
+            document.body.style.overflow = 'hidden'; // 禁止背景滚动
+        });
+
+        // 关闭弹窗
+        const closeModal = () => {
+            loginModal.style.display = 'none';
+            overlay.style.display = 'none';
+            document.body.style.overflow = 'auto'; // 恢复滚动
+        };
+
+        closeLogin.addEventListener('click', closeModal);
+        overlay.addEventListener('click', closeModal);
+
+        // 键盘ESC关闭弹窗
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeModal();
+        });
+
+        // 轮播图hover暂停（提升交互体验）
+        const carousel = document.querySelector('.carousel');
+        const carouselWrapper = document.querySelector('.carousel-wrapper');
+        
+        carousel.addEventListener('mouseenter', () => {
+            carouselWrapper.style.animationPlayState = 'paused';
+        });
+        
+        carousel.addEventListener('mouseleave', () => {
+            carouselWrapper.style.animationPlayState = 'running';
+        });
+    </script>
 </body>
 </html>
